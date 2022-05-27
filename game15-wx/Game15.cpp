@@ -55,6 +55,10 @@ int Game15::field(size_t r, size_t c) const
 /**/
 void Game15::play(size_t r, size_t c)
 {
+    static const std::vector<std::vector<int>> dirs{
+        {-1, 0}, {1, 0}, {0, -1}, {0, 1}
+    };
+
     ++r; ++c;
     if( _field[r-1][c] == 0 )
         return swap(r, c, r - 1, c);
@@ -91,7 +95,7 @@ int Game15::step() const
 /**/
 bool Game15::isOver() const
 {
-    static std::vector<std::vector<int>> win{
+    static const std::vector<std::vector<int>> win{
         {1, 2, 3, 4},
         {5, 6, 7, 8},
         {9, 10, 11, 12},

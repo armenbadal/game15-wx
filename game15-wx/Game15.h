@@ -6,6 +6,17 @@
 /**/
 class Game15 {
 public:
+    struct Cell {
+        size_t r; // row
+        size_t c; // column
+    };
+
+    struct Step {
+        Cell from;
+        Cell to;
+    };
+
+public:
     Game15();
 
     size_t side() const;

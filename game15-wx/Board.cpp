@@ -75,7 +75,7 @@ void Board::createMenus()
 void Board::createButtons()
 {
     auto font = GetFont();
-    font.SetPointSize(2 * font.GetPointSize());
+    font.SetPointSize(3 * font.GetPointSize());
 
     auto* grid = new wxGridSizer(4, 4, wxSize(0, 0));
 
